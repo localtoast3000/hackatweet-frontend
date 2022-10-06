@@ -1,0 +1,10 @@
+.light {
+  --switch-background: transparent;
+  --switch-border-color: var(--toolbar-contrast);
+  --icon-color: var(--toolbar-contrast);
+}
+.dark {
+  --switch-background: transparent;
+  --switch-border-color: var(--toolbar-contrast);
+  --icon-color: var(--toolbar-contrast);
+}

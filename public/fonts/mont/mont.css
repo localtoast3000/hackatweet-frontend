@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'mont-extralight';
+  src: url('./Mont-ExtraLight.otf') format('opentype');
+}
+@font-face {
+  font-family: 'mont-heavy';
+  src: url('./Mont-Heavy.otf') format('opentype');
+}

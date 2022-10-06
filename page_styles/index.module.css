@@ -1,0 +1,116 @@
+@import '/fonts/mont/mont.css';
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: var(--main-bg);
+}
+.imageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/twitter_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: fill;
+}
+.twitterImageLogo {
+  fill: var(--logo-on-image);
+  width: 350px;
+}
+.actionSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1500px;
+  height: 100%;
+  padding: 30px 40px;
+}
+.actionInnerWrapper {
+  width: 400px;
+  height: 100%;
+}
+.topLogoWrapper {
+  width: 100%;
+  height: 200px;
+}
+.twitterTopLogo {
+  fill: var(--logo-top);
+  width: 42px;
+  margin-bottom: auto;
+}
+.actionLowerWrapper {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.actionLowerWrapper h2 {
+  width: 100%;
+  font-size: 3.5rem;
+  color: var(--hero-text);
+  font-family: 'mont-heavy';
+  letter-spacing: 1.2px;
+  word-spacing: 10px;
+  margin-bottom: 20px;
+}
+.actionLowerWrapper p {
+  width: 100%;
+  font-size: 1.5rem;
+  color: var(--hero-text);
+  font-family: 'mont-heavy';
+  word-spacing: 5px;
+  letter-spacing: 1.5px;
+}
+.btnsContainer {
+  width: 100%;
+}
+.btnsContainer p {
+  width: 100%;
+  font-size: 0.8rem;
+}
+.signupBtn,
+.signinBtn {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  font-weight: 600;
+  opacity: 0.9;
+  transition: opacity 0.2s ease-in-out;
+}
+.signupBtn:hover,
+.signinBtn:hover {
+  opacity: 0.8;
+}
+.signupBtn:active,
+.signinBtn:active {
+  opacity: 1;
+}
+
+.signupBtn {
+  background-color: var(--primary);
+  color: var(--primary-txt);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.signinBtn {
+  background-color: transparent;
+  color: var(--primary);
+  border: solid var(--primary) 2px;
+  margin-top: 10px;
+}
+@media (max-width: 1080px) {
+  .twitterImageLogo {
+    width: 80%;
+  }
+}
+@media (max-width: 1000px) {
+  .imageWrapper {
+    display: none;
+  }
+  .actionSection {
+    width: 100%;
+  }
+}
