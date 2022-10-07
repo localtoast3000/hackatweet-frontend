@@ -5,5 +5,7 @@
   --logo-top: #ffffffdb;
   --hero-text: white;
   --primary: #378fee;
+  --secondary: #161d28;
   --primary-txt: white;
+  --bg-transparent: rgba(0, 0, 0, 0.884);
 }

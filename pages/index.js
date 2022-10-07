@@ -4,8 +4,12 @@ import { selectUser, addUser } from '../reducers/user';
 import styles from '../page_styles/index.module.css';
 import TwitterLogo from '../components/twiiter_logo';
 import Page from '../components/page';
+import Modal from '../components/modal/modal';
 
 export default function Index() {
+  const [signupModal, setSignupModal] = useState(false);
+  const [signinModal, setSigninModal] = useState(false);
+
   return (
     <Page className={styles.mainContainer} darkMode={true}>
       <div className={styles.imageWrapper}>
@@ -20,13 +24,45 @@ export default function Index() {
               <p>Join Hackatweet today.</p>
             </div>
             <div className={styles.btnsContainer}>
-              <button className={styles.signupBtn}>Sign up</button>
+              <button
+                onClick={() => {
+                  setSignupModal(true);
+                  setSigninModal(false);
+                }}
+                className={styles.signupBtn}>
+                Sign up
+              </button>
               <p>Already have an account?</p>
-              <button className={styles.signinBtn}>Sign in</button>
+              <button
+                onClick={() => {
+                  setSigninModal(true);
+                  setSignupModal(false);
+                }}
+                className={styles.signinBtn}>
+                Sign in
+              </button>
             </div>
           </div>
         </div>
       </section>
+      {signupModal ? (
+        <Modal show={signupModal} onClose={setSignupModal} className={styles.modal}>
+          <form>
+            <input type='text' />
+          </form>
+        </Modal>
+      ) : (
+        ''
+      )}
+      {signinModal ? (
+        <Modal show={signinModal} onClose={setSigninModal} className={styles.modal}>
+          <form>
+            <input type='text' />
+          </form>
+        </Modal>
+      ) : (
+        ''
+      )}
     </Page>
   );
 }
